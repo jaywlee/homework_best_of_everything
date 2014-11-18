@@ -12,11 +12,9 @@
   <dt>Venues</dt>
   <dd>
     <ul>
-      <% @neighborhood_venues.each do |venue| %>
+      <% Venue.where({ :neighborhood_id => @neighborhood.id }).each do |venue| %>
         <li><%= venue.name %></li>
       <% end %>
     </ul>
   </dd>
-
-
 </dl>
